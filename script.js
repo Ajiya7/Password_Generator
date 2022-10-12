@@ -25,10 +25,10 @@ function generatePassword() {
     numbersconfirm: false,
     specialcharactersconfirm: false,
     initialPassword: "",
-
+  
      pwdPasswordLength: function () {
       this.PasswordLength = prompt("Choose the lenght of the password between 8 and 127 in the textbox under:");
-      if (this.PasswordLength >7 &&this.PasswordLength < 128) {
+      if (this.PasswordLength >7 && this.PasswordLength < 128) {
       } else {
         alert("Please choose between the specified number of characters");
         generatePassword();
@@ -41,7 +41,7 @@ function generatePassword() {
   
       if (this.Uppercaseconfirm===true) {
         for (var u = 0; u < this.PasswordLength; u++) {
-          var upperRandom = Math.floor(Math.random() * Uppercase.PasswordLength);
+          var upperRandom = Math.floor(Math.random() * Uppercase.length);
           this.initialPassword += Uppercase[upperRandom];
         }
     }
@@ -55,7 +55,7 @@ function generatePassword() {
  
     if (this.Lowercaseconfirm===true) {
       for (var l = 0; l < this.PasswordLength; l++) {
-        var lowerRandom = Math.floor(Math.random() * Lowercase.PasswordLength);
+        var lowerRandom = Math.floor(Math.random() * Lowercase.length);
         this.initialPassword += Lowercase[lowerRandom];
       }
     }
@@ -69,7 +69,7 @@ function generatePassword() {
 
     if (this.numbersconfirm===true) {
       for (var n = 0; n < this.PasswordLength; n++) {
-        var numbersRandom = Math.floor(Math.random() * numbers.PasswordLength);
+        var numbersRandom = Math.floor(Math.random() * numbers.length);
         this.initialPassword += numbers[numbersRandom];
       }
     }
@@ -82,7 +82,7 @@ function generatePassword() {
     
     if (this.specialcharactersconfirm===true) {
       for (var s = 0; s < profile.PasswordLength; s++) {
-        var specialCharRandom = Math.floor(Math.random() * specialcharacters.PasswordLength);
+        var specialCharRandom = Math.floor(Math.random() * specialcharacters.length);
         this.initialPassword += specialcharacters[specialCharRandom];  
       }
     }
@@ -92,19 +92,19 @@ function generatePassword() {
     }
     return(this.initialPassword);  
     }  
-  };
-  while (profile.length !== null) {
+  }
+  while (profile.PasswordLength !== null) {
     profile.pwdPasswordLength();
     profile.pwdUppercaseconfirm();
     profile.pwdLowercaseconfirm();
     profile.pwdnumbersconfirm();
     profile.pwdspecialcharactersconfirm();
 
-    var initialPasswordLength = profile.initialPassword.PasswordLength;
+    var initialPasswordLength = profile.initialPassword.length;
     var result = "";
 
     for (var i = 0; i < profile.PasswordLength; i++) {
-      result += profile.initialPassword.charAt(Math.floor(Math.random() * initialPasswordLength));
+      result += profile.initialPassword[Math.floor(Math.random() * initialPasswordLength)];
     }
    
     return result;
