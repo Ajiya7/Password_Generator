@@ -27,8 +27,8 @@ function generatePassword() {
     initialPassword: "",
   
      pwdPasswordLength: function () {
-      this.PasswordLength = prompt("Choose the lenght of the password between 8 and 127 in the textbox under:");
-      if (this.PasswordLength >7 && this.PasswordLength < 128) {
+      this.PasswordLength = prompt("Choose the lenght of the password between 8 and 128 in the textbox under:");
+      if (this.PasswordLength >7 && this.PasswordLength < 129) {
       } else {
         alert("Please choose between the specified number of characters");
         generatePassword();
