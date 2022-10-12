@@ -34,10 +34,10 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 ## Usage
-Click the button to generate a password
-Then choose the number of characters you want for the password
-Then select at least one criteria for the password
-Then the passwort will be created in the text box and you can coppy your passcode
+* Click the button to generate a password
+* Then choose the number of characters you want for the password
+* Then select at least one criteria for the password
+* Then the passwort will be created in the text box and you can coppy your passcode
 
 ## Contact Me
 * Instagram: _ajiya
