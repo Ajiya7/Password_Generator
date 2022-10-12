@@ -85,13 +85,15 @@ function generatePassword() {
         var specialCharRandom = Math.floor(Math.random() * specialcharacters.length);
         this.initialPassword += specialcharacters[specialCharRandom];  
       }
+      return(this.initialPassword); 
     }
-    else if (this.Uppercaseconfirm===false && this.Lowercaseconfirm===false && this.numbersconfirm===false && this.specialcharactersconfirm===false) {
+
+    if (this.Uppercaseconfirm===false && this.Lowercaseconfirm===false && this.numbersconfirm===false && this.specialcharactersconfirm===false) {
       alert("At least one criteria must be selected. Please generate a new password.");
-      return;
+    }else{
+      generatePassword()
     }
-    return(this.initialPassword);  
-    }  
+  }
   }
   while (profile.PasswordLength !== null) {
     profile.pwdPasswordLength();
